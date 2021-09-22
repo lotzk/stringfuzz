@@ -86,7 +86,7 @@ def make_re_union(s, w):         return Token('RE_UNION',      w, s.match.start(
 def make_re_inter(s, w):         return Token('RE_INTER',      w, s.match.start())
 
 # constants
-ALPHABET     = string.digits + string.ascii_letters + string.punctuation
+ALPHABET     = string.digits + string.ascii_letters #+ string.punctuation
 WHITESPACE   = string.whitespace
 ID_CHAR      = r'[\w._\+\-\*\=%?!$_~&^<>@/|:\\]'
 SETTING_CHAR = r'[\w._\+\-\*\=%?!$_~&^<>@/|:]'
