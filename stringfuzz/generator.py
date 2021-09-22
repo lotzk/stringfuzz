@@ -194,7 +194,7 @@ def generate_expr(e, language):
         if language == SMT_20_STRING:
             components.append('Str2Reg')
         elif language == SMT_25_STRING:
-            components.append('str.to.re')
+            components.append('str.to_re')
         else:
             raise NotSupported(e, language)
 
@@ -202,7 +202,7 @@ def generate_expr(e, language):
         if language == SMT_20_STRING:
             components.append('RegexIn')
         elif language == SMT_25_STRING:
-            components.append('str.in.re')
+            components.append('str.in_re')
         else:
             raise NotSupported(e, language)
 
@@ -222,6 +222,7 @@ def generate_expr(e, language):
         else:
             raise NotSupported(e, language)
 
+    
     elif isinstance(e, RePlusNode):
         if language == SMT_20_STRING:
             components.append('RegexPlus')
@@ -229,6 +230,7 @@ def generate_expr(e, language):
             components.append('re.+')
         else:
             raise NotSupported(e, language)
+
 
     elif isinstance(e, ReRangeNode):
         if language == SMT_20_STRING:
